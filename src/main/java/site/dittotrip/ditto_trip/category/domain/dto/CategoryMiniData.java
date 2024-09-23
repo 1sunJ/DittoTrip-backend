@@ -10,11 +10,13 @@ public class CategoryMiniData {
 
     private Long categoryId;
     private String name;
+    private String imagePath;
 
     public static CategoryMiniData fromEntity(Category category) {
         return CategoryMiniData.builder()
                 .categoryId(category.getId())
                 .name(category.getName())
+                .imagePath(category.getImagePath())
                 .build();
     }
 
